@@ -1,5 +1,6 @@
 package Gun03;
 
+import Utlity.MyFunc;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -12,5 +13,9 @@ public class _01_OpeningWebsite {
 
         driver.get("https://techno.study/tr");  // web sayfasını aç
 
+
+        MyFunc.Bekle(3);
+        //bekleme
+        driver.quit();
     }
 }
