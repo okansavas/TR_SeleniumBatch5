@@ -23,6 +23,9 @@ public class _04_FindingByName {
         WebElement soyad=driver.findElement(By.name("q8_name[last]"));
         soyad.sendKeys("Temur");
 
+        WebElement btnSubmit=driver.findElement(By.id("input_2"));
+        btnSubmit.click();
+
         MyFunc.Bekle(5);
         driver.quit();
     }
