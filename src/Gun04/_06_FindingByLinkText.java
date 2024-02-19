@@ -25,6 +25,11 @@ public class _06_FindingByLinkText {
         WebElement link2=driver.findElement(By.partialLinkText("Süper Fiyat"));
         System.out.println("link2.getText() = " + link2.getText());
 
+        //elementin özelliklerine getAttribute ile ulaşabilirim (Bütün tagler için geçerli).
+        System.out.println("siparislerimLinki.href = " + siparislerimLinki.getAttribute("href"));
+        System.out.println("siparislerimLinki.title = " + siparislerimLinki.getAttribute("title"));
+        System.out.println("siparislerimLinki.rel = " + siparislerimLinki.getAttribute("rel"));
+
         MyFunc.Bekle(5);
         driver.quit();
     }
