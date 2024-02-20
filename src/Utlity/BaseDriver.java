@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 public class BaseDriver {
     public static WebDriver driver;
-    static{
+    static{ //bunun sarti extends olmasi ve basta yer almasi
         driver=new ChromeDriver();
 
         //driver.manage().window().maximize(); // Ekranı max yapıyor.
