@@ -8,7 +8,7 @@ import java.util.List;
 
 public class _01_FindingElements_tag extends BaseDriver {
     public static void main(String[] args) {
-        driver.get("https://www.hepsiburada.com/");
+        driver.get("https://www.amazon.com/");
 
         List<WebElement> linkler = driver.findElements(By.tagName("a"));
                                    // bütün a olan tagli elementleri bul
