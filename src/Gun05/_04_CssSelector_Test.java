@@ -22,7 +22,7 @@ public class _04_CssSelector_Test extends BaseDriver {
 
         WebElement msg=driver.findElement(By.cssSelector("[id='display']"));
 
-        Assert.assertTrue("Aranılan mesaj bulunamadı!", msg.getText().contains("Merhaba Selenium1"));
+        Assert.assertTrue("Aranılan mesaj bulunamadı!", msg.getText().contains("Merhaba Selenium"));
         //Ben true bekliyorum, değilse göster, yoksa test passed
 
         BekleKapat();
