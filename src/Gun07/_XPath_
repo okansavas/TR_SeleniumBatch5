@@ -28,8 +28,8 @@ içinde       id*              //input[ contains(@id,'u_') ]
 CSS Alt elemanlardan          XPath
 >       -> cocuklar           /
 space   -> tüm çocuklar       //
-+       -> bitik kardeş       following-sibling::
-~       -> tüm kardeşler      following::
++       -> bitik kardeş       /following-sibling::
+~       -> tüm kardeşler      //following::
 
 CSS nth-child                 XPath
 [id='list']>:nth-child(3)     //ul[@id='list']/li[3]  -> li lerin 3.cüsü
