@@ -29,7 +29,7 @@ public class _03_Soru extends BaseDriver {
         // elemanı bulursa 1 elemanlı list döndürür
         // bulamazsa size 0 olan bir list döndürür
 
-        if (cookiesAccept.size() > 0) //eğer elemanı bulamişşse
+        if (cookiesAccept.size() > 0) //eğer elemanı bulabilmiş se
              cookiesAccept.get(0).click();
 
         MyFunc.Bekle(2);
