@@ -22,16 +22,16 @@ public class _11_Soru extends BaseDriver {
         driver.get("https://www.mediamarkt.com.tr/");
         Actions driverAksiyon=new Actions(driver);
 
-        WebElement tumKategoriler=driver.findElement(By.xpath("//*[text()='Tüm Kategoriler']"));
-        WebElement beyazEsya=driver.findElement(By.xpath("//*[contains(text(),'Beyaz Eşya') ]"));
-        WebElement kombi=driver.findElement(By.xpath("//*[contains(text(),'Kombiler')]"));
+        WebElement tumKategoriler=driver.findElement(By.xpath("//*[text()='Tüm Kategoriler']")); // a linktext
+        WebElement beyazEsya=driver.findElement(By.xpath("//*[contains(text(),'Beyaz Eşya') ]")); //a linktext
+        WebElement kombiler=driver.findElement(By.xpath("//*[contains(text(),'Kombiler')]")); //a linktext
 
         driverAksiyon.moveToElement(tumKategoriler).build().perform();
         MyFunc.Bekle(2);
         driverAksiyon.moveToElement(beyazEsya).build().perform();
         MyFunc.Bekle(2);
 
-        kombi.click();
+        kombiler.click();
 
         String url=driver.getCurrentUrl();
 
