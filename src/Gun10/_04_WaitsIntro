@@ -1,0 +1,30 @@
+1- Elementin HTML de olması durumu
+2- Element HTML de var, fakat görünür değil, veya daha yüklenmemiş
+3- Element HTML de var, görünür durumda fakat tıklanabilir değil.
+
+Thread.Sleep (MyFunc.Bekle) -> Java programını verilen süre kadar bekletir.
+Web sayfaları için uygun değil
+
+Selenium un Bekletme komutları neler ?
+
+1- pageLoadTimeout (web sayfasına özel)
+   1 kere yazılır, sayafanın yüklenmesi verilen bekleme süresidir.
+   Bu süreden yüklenmezse hata verir.Bunu kullanmazsan, sonsuza
+   kadar bekler.
+
+   driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+   // 20 sn mühlet: sayfayı yükleme mühlet
+
+2- implicitlyWait  (Genel tüm WebElementler için)
+   1. kere yazılır. Bütün elemenlar için findElement/s komutu için
+   elementin bulunması için verilen mühlet. Bu sürede bulunmazsa
+   element bulunamamış olur ve findElement hata verir,
+   findElementS için boş döndürür.
+
+   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+3- ExplicitWait  (WebElement e özel)
+   Element verilen kritere uygun hale gelene kadar bekle, sadece ilgili
+   elemnt için çalışır.sadece o anda çalışır.
+   ilgili eleman Görünür olana kadar bekle
+   ilgili eleman Tıklanabilir olana kadar bekle
