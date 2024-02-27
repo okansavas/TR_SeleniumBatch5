@@ -27,11 +27,12 @@ public class _11_Soru extends BaseDriver {
         WebElement kombiler=driver.findElement(By.xpath("//*[contains(text(),'Kombiler')]")); //a linktext
 
         driverAksiyon.moveToElement(tumKategoriler).build().perform();
-        MyFunc.Bekle(2);
+        MyFunc.Bekle(3);
         driverAksiyon.moveToElement(beyazEsya).build().perform();
-        MyFunc.Bekle(2);
+        MyFunc.Bekle(3);
 
-        kombiler.click();
+        driverAksiyon.click(kombiler).build().perform();
+       // kombiler.click();
 
         String url=driver.getCurrentUrl();
 
