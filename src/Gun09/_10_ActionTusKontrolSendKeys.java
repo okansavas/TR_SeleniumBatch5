@@ -42,6 +42,8 @@ public class _10_ActionTusKontrolSendKeys extends BaseDriver {
                 .sendKeys(Keys.ENTER)
                 .build()
                 .perform();
+
+        BekleKapat();
     }
 
 }
