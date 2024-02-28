@@ -10,5 +10,34 @@ package Gun11;
         (xpath kullanmayınız)
  */
 
-public class _02_Soru {
+import Utlity.BaseDriver;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+public class _02_Soru extends BaseDriver {
+
+    @Test
+    public void Test1(){
+        driver.get("http://demo.seleniumeasy.com/ajax-form-submit-demo.html");
+
+        WebElement title=driver.findElement(By.id("title"));
+        title.sendKeys("müşteri memnuniyeti");
+
+        WebElement description=driver.findElement(By.id("description"));
+        description.sendKeys("Yeni aldığım ürün oldukça oldukça iyi çıktı, teşekkür ederiz.");
+
+        WebElement submit=driver.findElement(By.id("btn-submit"));
+        submit.click();
+
+
+
+
+    }
+
+
+
 }
