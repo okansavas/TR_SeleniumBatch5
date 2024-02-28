@@ -9,6 +9,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+/*
+   Interview Sorusu : ImlicitlyWait ile ExplicitWait arasında ne fark vardır
+
+   Implicitly : Bütün elementler için kullanılır.1 kere yazılır ve HTML de ilgili locator
+                var mı ? (findElement/s bunda çalışır)
+
+   Explicit   : Elemente özeldir. Element için verilen kriterin kontrolü için mühlet, süre.
+
+ */
+
+
+
+
 public class _01_ExplicitWait extends BaseDriver {
 
     @Test
