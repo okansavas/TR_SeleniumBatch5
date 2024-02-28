@@ -11,9 +11,11 @@ package Gun11;
  */
 
 import Utlity.BaseDriver;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -33,9 +35,12 @@ public class _02_Soru extends BaseDriver {
         WebElement submit=driver.findElement(By.id("btn-submit"));
         submit.click();
 
+       wait.until(ExpectedConditions.textToBe(By.id("submit-control"), "Form submited Successfully!"));
+       WebElement mesaj=driver.findElement(By.id("submit-control"));
 
+        Assert.assertTrue("Aranılan mesaj bulunamadı",  mesaj.getText().equals("Form submited Successfully!") );
 
-
+        BekleKapat();
     }
 
 
