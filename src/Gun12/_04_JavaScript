@@ -5,9 +5,9 @@ driver üzerinden JavaScript çalıştırma
 JavascriptExecutor js=(JavascriptExecutor)driver;
 
 Scroll
-js.executeScript("window.scrolTo(0,3000)"); -> Baştan Verilen pixel kadar scroll
-js.executeScript("window.scrolBy(0,3000)"); -> bulunduğu yerden pixel kadar scroll
-js.executeScript("window.scrolTo(0,dcument.body.scrollHeight)"); -> Verilen pixel kadar scroll
+js.executeScript("window.scrollTo(0,3000)"); -> Baştan Verilen pixel kadar scroll
+js.executeScript("window.scrollBy(0,3000)"); -> bulunduğu yerden pixel kadar scroll
+js.executeScript("window.scrollTo(0,dcument.body.scrollHeight)"); -> Verilen pixel kadar scroll
 
 click
 js.("arguments[0].click();", element)   -> javascript click()  -> javascript click.
