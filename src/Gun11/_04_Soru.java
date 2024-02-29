@@ -43,8 +43,9 @@ public class _04_Soru extends BaseDriver {
 
         wait.until(ExpectedConditions.urlToBe("https://www.selenium.dev/")); //titleContains("Selenium")
 
+        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
         Assert.assertTrue("Sayfaya ulaşılamadı.",
-                driver.getCurrentUrl().equals("https://www.selenium.dev/"));
+                driver.getCurrentUrl().equals("https://www.selenium.dev/"));  //https://www.selenium.dev/
 
         BekleKapat();
     }
