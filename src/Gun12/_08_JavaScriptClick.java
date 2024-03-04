@@ -18,7 +18,7 @@ public class _08_JavaScriptClick extends BaseDriver {
 
         WebElement readStory=driver.findElement(By.xpath("//div[text()='Read Success Story']"));
         //readStory.click();  // sayafa önünden mouıse click
-        js.executeScript("arguments[0].click();", readStory); // js click : sayafa içinden click
+        js.executeScript("arguments[0].click();", readStory); // js click : sayfanın içinden click
 
         MyFunc.Bekle(3);
         BekleKapat();
