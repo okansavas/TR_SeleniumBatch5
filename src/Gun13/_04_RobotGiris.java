@@ -32,6 +32,7 @@ public class _04_RobotGiris extends BaseDriver {
         robot.keyPress(KeyEvent.VK_T);   // ctrl basılı idi, T harfine bastım
         robot.keyRelease(KeyEvent.VK_T);  // T tuşunu bırak
         robot.keyRelease(KeyEvent.VK_CONTROL); // CTRL tuşunu bırak
+        MyFunc.Bekle(2);// burada yeni sayfanın açılmış ve hazır olması için bekleme kondu
 
         // şimdi 2.sayfanın id sini bulup ona geçip yeni sayfayı çağıralım
         Set<String> idler=driver.getWindowHandles();
@@ -39,7 +40,7 @@ public class _04_RobotGiris extends BaseDriver {
         String birinciSekmeId= gosterge.next().toString(); // ilk penrenin id sini aldım
         String ikinciSekmeId= gosterge.next().toString(); // ikinci penrenin id sini aldım
 
-        MyFunc.Bekle(2); // burada yeni sayfanın açılmış ve hazır olması gerekiyor.
+        MyFunc.Bekle(2);
         driver.switchTo().window(ikinciSekmeId);
         driver.get("https://www.facebook.com/");
 
