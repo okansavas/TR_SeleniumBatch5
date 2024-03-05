@@ -36,8 +36,10 @@ public class _01_EkranKaydet extends BaseDriver {
             File hafizadakiHali= ts.getScreenshotAs(OutputType.FILE); // ekran kaydı aldı dosya
             // formatında ama hafıda duruyor.
 
-            FileUtils.copyFile(hafizadakiHali, new File("ekranGoruntuler\\screenshot.jpg"));
-            //Şu anda hazıfzadaki görüntüyü dosya olarak kaydetti.
+            FileUtils.copyFile(hafizadakiHali, new File("ekranGoruntuler\\screenshot.jpg")); // zaman bilgisi
+            //Şu anda hazıfzadaki görüntüyü dosya olarak kaydetti.  2024_04_05_13:56
+
+            // TODO :  Öyle bir şey yapınki her ekran kaydı , AYRI AYRI kaydedilsin.
         }
 
 
