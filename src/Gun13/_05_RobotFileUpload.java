@@ -21,14 +21,17 @@ public class _05_RobotFileUpload extends BaseDriver {
         MyFunc.Bekle(2);
 
         // acceptAll
-        WebElement acceptAllFrame=driver.findElement(By.id("gdpr-consent-notice"));
-        driver.switchTo().frame(acceptAllFrame);
+        List<WebElement> acceptAllFrame=driver.findElements(By.id("gdpr-consent-notice"));
+        if (acceptAllFrame.size()>0) {
 
-        List<WebElement> acceptAll=
-                wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//span[text()='Accept All']")));
+            driver.switchTo().frame(acceptAllFrame.get(0));
 
-        if (acceptAll.size() > 0)
-            acceptAll.get(0).click();
+            List<WebElement> acceptAll =
+                    wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//span[text()='Accept All']")));
+
+            if (acceptAll.size() > 0)
+                acceptAll.get(0).click();
+        }
         /*********************/
 
         Robot robot = new Robot();
